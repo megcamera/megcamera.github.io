@@ -1,0 +1,24 @@
+:root {
+  --ink: #171719;
+  --muted: #66635f;
+  --paper: #f4f1ea;
+  --paper-bright: #fbfaf6;
+  --blue: #175ddd;
+  --blue-deep: #153b91;
+  --coral: #ff6b57;
+  --yellow: #f4cf41;
+  --line: rgba(23, 23, 25, .18);
+  --display: "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --hand: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+  --wide: min(1400px, calc(100vw - 64px));
+  --page: min(1220px, calc(100vw - 64px));
+}
+
+@media (max-width: 720px) {
+  :root {
+    --wide: calc(100vw - 28px);
+    --page: calc(100vw - 28px);
+  }
+}

@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="About Megan"
+  description="Meet Megan Feng, an Omaha student photographer, cellist, writer, and school-community leader."
+  image="/images/work/photo-40-1600.webp"
+>
+  <section class="about-hero">
+    <div class="about-title" data-reveal>
+      <p class="eyebrow">Behind the camera</p>
+      <h1>Serious about the work.<br><em>Not too serious about myself.</em></h1>
+    </div>
+    <figure class="about-photo about-photo-one">
+      <img src="/images/work/photo-40-1600.webp" alt="Playful studio portrait with a heart made around one eye" width="1600" height="1154">
+    </figure>
+    <figure class="about-photo about-photo-two">
+      <img src="/images/work/photo-42-800.webp" alt="Camera gear arranged on a white surface" width="800" height="533">
+    </figure>
+    <p class="about-scribble" aria-hidden="true">hello from<br>the other side<br>of the lens →</p>
+  </section>
+
+  <section class="about-story" data-reveal>
+    <div>
+      <p class="eyebrow">Hello!</p>
+      <h2>I’m Megan Feng.</h2>
+    </div>
+    <div class="about-prose">
+      <p class="about-lead">
+        I’m a sophomore at Millard North High School in Omaha, Nebraska. I started making photographs because I wanted to hold onto the energy around me—the people, practices, meets, and ordinary afternoons that move too quickly.
+      </p>
+      <p>
+        Sports taught me to anticipate. Orchestra taught me to listen. Debate taught me to look at the same thing from more than one angle. Those habits follow me every time I pick up a camera.
+      </p>
+      <p>
+        At school, I serve as team photographer and social media coordinator for Swim & Dive, help create Orchestra social content, play principal cello in Philharmonic Orchestra, and participate in Debate and Student Council. Away from school, I assist young string students and volunteer with children through the Munroe-Meyer Institute.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-values">
+    <p class="eyebrow" data-reveal>What I bring</p>
+    <div class="values-list">
+      <article data-reveal><span>01</span><h3>Notice</h3><p>Small gestures usually tell the biggest story.</p></article>
+      <article data-reveal><span>02</span><h3>Anticipate</h3><p>The best sports frame starts before the action does.</p></article>
+      <article data-reveal><span>03</span><h3>Connect</h3><p>People look most like themselves when they feel seen.</p></article>
+      <article data-reveal><span>04</span><h3>Follow through</h3><p>Good work includes the planning, editing, and sharing.</p></article>
+    </div>
+  </section>
+
+  <section class="about-timeline">
+    <div class="timeline-intro" data-reveal>
+      <p class="eyebrow">A few recent chapters</p>
+      <h2>Learning in public.</h2>
+    </div>
+    <ol>
+      <li data-reveal><time>2026</time><div><b>Scholastic Art & Writing Awards</b><p>Silver Key personal essay and Honorable Mention poem; both selected for publication.</p></div></li>
+      <li data-reveal><time>2026</time><div><b>Music</b><p>Division I string quintet and Division II cello solo at NSAA District Music Contest; Highly Superior at the ASTA Young Orchestra Festival.</p></div></li>
+      <li data-reveal><time>2026</time><div><b>School community</b><p>Ran Mustang Mart, created the Orchestra senior slideshow and posts, and was nominated to represent Millard North at the MPS Diversity Retreat.</p></div></li>
+      <li data-reveal><time>2025—now</time><div><b>Making things happen</b><p>Assistant string teacher, volunteer, orchestra leader, team manager, student council member, and debater.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="about-cta" data-reveal>
+    <p>Back to what brought you here?</p>
+    <a class="circle-link dark" href="/#work"><span>See the<br>photographs</span><b aria-hidden="true">↗</b></a>
+  </section>
+</BaseLayout>

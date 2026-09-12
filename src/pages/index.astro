@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Omaha · Student photographer</p>
+      <h1>
+        Hi, I’m Megan.<br>
+        <em>I notice things.</em>
+      </h1>
+      <p class="hero-lead">
+        The breath before the race. The laugh between poses. The version of a day you only see for a second.
+      </p>
+      <a class="circle-link" href="#work">
+        <span>See my<br>recent work</span>
+        <b aria-hidden="true">↓</b>
+      </a>
+    </div>
+
+    <div class="hero-collage" aria-label="Featured photography">
+      <figure class="hero-main">
+        <img src="/images/work/photo-11-1600.webp" alt="A pole vaulter suspended above the bar" width="2048" height="1365" fetchpriority="high">
+      </figure>
+      <figure class="hero-inset">
+        <img src="/images/work/photo-18-800.webp" alt="A student standing at the entrance to a footbridge" width="800" height="590">
+      </figure>
+      <p class="scribble" aria-hidden="true">right place,<br>right second ✦</p>
+      <span class="hero-stamp" aria-hidden="true">MF<br>2026</span>
+    </div>
+
+    <p class="hero-index" aria-hidden="true">01 — 47</p>
+  </section>
+
+  <aside class="ticker" aria-label="Photography themes">
+    <div>
+      <span>Sports</span><i>✦</i><span>Portraits</span><i>✦</i><span>School life</span><i>✦</i>
+      <span>Real people, real moments</span><i>✦</i><span>Sports</span><i>✦</i><span>Portraits</span>
+    </div>
+  </aside>
+
+  <PhotoGallery />
+
+  <section class="point-of-view" data-reveal>
+    <div class="pov-number" aria-hidden="true">16</div>
+    <div class="pov-copy">
+      <p class="eyebrow">My point of view</p>
+      <blockquote>
+        “I’m drawn to people who are completely <em>in</em> the moment—competing, creating, laughing, being themselves.”
+      </blockquote>
+      <p>
+        I’m a sophomore at Millard North High School. I photograph the teams, performances, friends, and small in-between moments that make school feel like ours.
+      </p>
+      <a class="underlined-link" href="/about">A little more about me <span aria-hidden="true">→</span></a>
+    </div>
+    <figure class="pov-photo">
+      <img src="/images/work/photo-27-1600.webp" alt="A student walking away down a quiet road with her arms out" width="1600" height="1355" loading="lazy">
+      <figcaption>Out there, somewhere · 2026</figcaption>
+    </figure>
+  </section>
+
+  <section class="recognition" id="recognition">
+    <div class="recognition-head" data-reveal>
+      <p class="eyebrow">Outside the frame</p>
+      <h2>Curious in<br>more than one way.</h2>
+      <p>Photography is part of a bigger story: writing, music, debate, leadership, and showing up for my community.</p>
+    </div>
+    <div class="notes-grid">
+      <article class="note note-coral" data-reveal>
+        <span>01</span>
+        <p class="note-doodle" aria-hidden="true">words!</p>
+        <h3>Writer</h3>
+        <p>2026 Scholastic Art & Writing Awards—Silver Key in personal essay and Honorable Mention in poetry, with both pieces published.</p>
+      </article>
+      <article class="note note-blue" data-reveal>
+        <span>02</span>
+        <p class="note-doodle" aria-hidden="true">♪</p>
+        <h3>Cellist</h3>
+        <p>Principal cellist, orchestra leadership team, and Division I string quintet at the 2026 NSAA District Music Contest.</p>
+      </article>
+      <article class="note note-yellow" data-reveal>
+        <span>03</span>
+        <p class="note-doodle" aria-hidden="true">go!</p>
+        <h3>Team person</h3>
+        <p>Swim & Dive team manager and social media coordinator—photographing the season and helping the team feel connected.</p>
+      </article>
+      <article class="note note-paper" data-reveal>
+        <span>04</span>
+        <p class="note-doodle" aria-hidden="true">speak up</p>
+        <h3>Participant</h3>
+        <p>Debate, Student Council, Mustang Mart, and a freshman representative nominee for the MPS Diversity Retreat.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="closing-frame" data-reveal>
+    <img src="/images/work/photo-23-1600.webp" alt="Two friends walking and laughing in a garden" width="1600" height="1300" loading="lazy">
+    <div>
+      <p class="eyebrow">The whole contact sheet</p>
+      <h2>There’s more<br>to the story.</h2>
+      <a class="button-light" href="https://lightroom.adobe.com/shares/d7e0631ea3024172992caff26c77fd48" target="_blank" rel="noreferrer">
+        View all 47 photographs <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
