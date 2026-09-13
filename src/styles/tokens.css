@@ -1,24 +1,21 @@
 :root {
-  --ink: #171719;
-  --muted: #66635f;
-  --paper: #f4f1ea;
-  --paper-bright: #fbfaf6;
-  --blue: #175ddd;
-  --blue-deep: #153b91;
-  --coral: #ff6b57;
-  --yellow: #f4cf41;
-  --line: rgba(23, 23, 25, .18);
-  --display: "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --ink: #373733;
+  --muted: #6c6c64;
+  --sage: #dadbd1;
+  --sage-deep: #c9cabe;
+  --cream: #f1f0eb;
+  --warm: #c8a987;
+  --line: rgba(55, 55, 51, .28);
+  --serif: "Iowan Old Style", Baskerville, "Times New Roman", serif;
   --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --hand: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
-  --wide: min(1400px, calc(100vw - 64px));
-  --page: min(1220px, calc(100vw - 64px));
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --wide: min(1600px, calc(100vw - 11vw));
+  --content: min(1280px, calc(100vw - 15vw));
 }
 
 @media (max-width: 720px) {
   :root {
-    --wide: calc(100vw - 28px);
-    --page: calc(100vw - 28px);
+    --wide: calc(100vw - 36px);
+    --content: calc(100vw - 36px);
   }
 }

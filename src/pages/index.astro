@@ -1,107 +1,90 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PhotoGallery from '../components/PhotoGallery.astro';
 ---
 <BaseLayout>
-  <section class="hero">
-    <div class="hero-copy" data-reveal>
-      <p class="eyebrow">Omaha · Student photographer</p>
-      <h1>
-        Hi, I’m Megan.<br>
-        <em>I notice things.</em>
-      </h1>
-      <p class="hero-lead">
-        The breath before the race. The laugh between poses. The version of a day you only see for a second.
-      </p>
-      <a class="circle-link" href="#work">
-        <span>See my<br>recent work</span>
-        <b aria-hidden="true">↓</b>
-      </a>
-    </div>
+  <section class="editorial-hero">
+    <figure class="editorial-hero-main" data-reveal>
+      <img src="/images/work/photo-11-1600.webp" alt="A pole vaulter preparing to launch" width="2048" height="1365" fetchpriority="high">
+      <figcaption>Between earth & sky · 2026</figcaption>
+    </figure>
 
-    <div class="hero-collage" aria-label="Featured photography">
-      <figure class="hero-main">
-        <img src="/images/work/photo-11-1600.webp" alt="A pole vaulter suspended above the bar" width="2048" height="1365" fetchpriority="high">
-      </figure>
-      <figure class="hero-inset">
-        <img src="/images/work/photo-18-800.webp" alt="A student standing at the entrance to a footbridge" width="800" height="590">
-      </figure>
-      <p class="scribble" aria-hidden="true">right place,<br>right second ✦</p>
-      <span class="hero-stamp" aria-hidden="true">MF<br>2026</span>
-    </div>
-
-    <p class="hero-index" aria-hidden="true">01 — 47</p>
-  </section>
-
-  <aside class="ticker" aria-label="Photography themes">
-    <div>
-      <span>Sports</span><i>✦</i><span>Portraits</span><i>✦</i><span>School life</span><i>✦</i>
-      <span>Real people, real moments</span><i>✦</i><span>Sports</span><i>✦</i><span>Portraits</span>
-    </div>
-  </aside>
-
-  <PhotoGallery />
-
-  <section class="point-of-view" data-reveal>
-    <div class="pov-number" aria-hidden="true">16</div>
-    <div class="pov-copy">
-      <p class="eyebrow">My point of view</p>
-      <blockquote>
-        “I’m drawn to people who are completely <em>in</em> the moment—competing, creating, laughing, being themselves.”
-      </blockquote>
+    <div class="editorial-intro" data-reveal>
       <p>
-        I’m a sophomore at Millard North High School. I photograph the teams, performances, friends, and small in-between moments that make school feel like ours.
+        Photographs of effort, friendship, and the moments in between—made by Megan Feng, a student photographer in Omaha.
       </p>
-      <a class="underlined-link" href="/about">A little more about me <span aria-hidden="true">→</span></a>
     </div>
-    <figure class="pov-photo">
-      <img src="/images/work/photo-27-1600.webp" alt="A student walking away down a quiet road with her arms out" width="1600" height="1355" loading="lazy">
-      <figcaption>Out there, somewhere · 2026</figcaption>
+
+    <figure class="editorial-hero-side" data-reveal>
+      <img src="/images/work/photo-45-1600.webp" alt="A tennis player serving beneath a vivid blue sky" width="1365" height="2048">
+      <figcaption>Match point · 2026</figcaption>
     </figure>
   </section>
 
-  <section class="recognition" id="recognition">
-    <div class="recognition-head" data-reveal>
-      <p class="eyebrow">Outside the frame</p>
-      <h2>Curious in<br>more than one way.</h2>
-      <p>Photography is part of a bigger story: writing, music, debate, leadership, and showing up for my community.</p>
+  <section class="portfolio-index" id="work">
+    <header class="portfolio-intro" data-reveal>
+      <p class="micro-label">Selected portfolio · 2026</p>
+      <h1>Stories I<br>couldn’t leave<br>behind.</h1>
+      <p>Three ways of looking at the people and places around me.</p>
+    </header>
+
+    <article class="project-card project-sports" data-reveal>
+      <a href="/work/sports">
+        <figure>
+          <img src="/images/work/photo-04-1600.webp" alt="A swimmer turning to breathe during a freestyle race" width="2048" height="1365" loading="lazy">
+        </figure>
+        <div class="project-meta">
+          <span>01 / Sports</span>
+          <h2>In motion</h2>
+          <p>Swim, track, and tennis—the instant effort becomes visible.</p>
+          <b>View series →</b>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card project-portraits" data-reveal>
+      <a href="/work/portraits">
+        <figure>
+          <img src="/images/work/photo-27-1600.webp" alt="A student walking away down a quiet road with her arms out" width="2048" height="1735" loading="lazy">
+        </figure>
+        <div class="project-meta">
+          <span>02 / Portraits</span>
+          <h2>Being here</h2>
+          <p>Friends, classmates, and a little room to be completely yourself.</p>
+          <b>View series →</b>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card project-details" data-reveal>
+      <a href="/work/details">
+        <figure>
+          <img src="/images/work/photo-42-1600.webp" alt="Camera equipment arranged on a white surface" width="2048" height="1365" loading="lazy">
+        </figure>
+        <div class="project-meta">
+          <span>03 / Details</span>
+          <h2>A closer look</h2>
+          <p>The tools, gestures, and small pieces that complete a story.</p>
+          <b>View series →</b>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <section class="home-about" data-reveal>
+    <div>
+      <p class="micro-label">A little context</p>
+      <h2>Hi, I’m Megan.</h2>
     </div>
-    <div class="notes-grid">
-      <article class="note note-coral" data-reveal>
-        <span>01</span>
-        <p class="note-doodle" aria-hidden="true">words!</p>
-        <h3>Writer</h3>
-        <p>2026 Scholastic Art & Writing Awards—Silver Key in personal essay and Honorable Mention in poetry, with both pieces published.</p>
-      </article>
-      <article class="note note-blue" data-reveal>
-        <span>02</span>
-        <p class="note-doodle" aria-hidden="true">♪</p>
-        <h3>Cellist</h3>
-        <p>Principal cellist, orchestra leadership team, and Division I string quintet at the 2026 NSAA District Music Contest.</p>
-      </article>
-      <article class="note note-yellow" data-reveal>
-        <span>03</span>
-        <p class="note-doodle" aria-hidden="true">go!</p>
-        <h3>Team person</h3>
-        <p>Swim & Dive team manager and social media coordinator—photographing the season and helping the team feel connected.</p>
-      </article>
-      <article class="note note-paper" data-reveal>
-        <span>04</span>
-        <p class="note-doodle" aria-hidden="true">speak up</p>
-        <h3>Participant</h3>
-        <p>Debate, Student Council, Mustang Mart, and a freshman representative nominee for the MPS Diversity Retreat.</p>
-      </article>
+    <div>
+      <p>
+        I’m a sophomore at Millard North High School. Sports taught me to anticipate, orchestra taught me to listen, and photography lets me keep the seconds that would otherwise disappear.
+      </p>
+      <a href="/about">More about me →</a>
     </div>
   </section>
 
-  <section class="closing-frame" data-reveal>
-    <img src="/images/work/photo-23-1600.webp" alt="Two friends walking and laughing in a garden" width="1600" height="1300" loading="lazy">
-    <div>
-      <p class="eyebrow">The whole contact sheet</p>
-      <h2>There’s more<br>to the story.</h2>
-      <a class="button-light" href="https://lightroom.adobe.com/shares/d7e0631ea3024172992caff26c77fd48" target="_blank" rel="noreferrer">
-        View all 47 photographs <span aria-hidden="true">↗</span>
-      </a>
-    </div>
+  <section class="home-final-image" data-reveal>
+    <img src="/images/work/photo-01-1600.webp" alt="A diver stretched horizontally above a swimming pool" width="2048" height="1365" loading="lazy">
+    <p>Flight · 2026</p>
   </section>
 </BaseLayout>

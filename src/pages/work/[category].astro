@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryGallery from '../../components/CategoryGallery.astro';
+import {categoryInfo, photos} from '../../data/gallery';
+
+type Category = keyof typeof categoryInfo;
+
+export function getStaticPaths() {
+  return (Object.keys(categoryInfo) as Category[]).map((category) => ({
+    params: {category},
+    props: {category},
+  }));
+}
+
+const {category} = Astro.props as {category: Category};
+const info = categoryInfo[category];
+const categoryPhotos = photos.filter((photo) => photo.category === category);
+const categories = Object.entries(categoryInfo) as [Category, typeof categoryInfo[Category]][];
+const coverId = String(info.cover).padStart(2, '0');
+---
+<BaseLayout
+  title={`${info.eyebrow} — ${info.title}`}
+  description={info.description}
+  image={`/images/work/photo-${coverId}-1600.webp`}
+>
+  <header class="collection-head">
+    <p class="micro-label">{info.eyebrow} · {String(categoryPhotos.length).padStart(2, '0')} photographs</p>
+    <h1>{info.title}</h1>
+    <p>{info.description}</p>
+  </header>
+
+  <nav class="collection-nav" aria-label="Portfolio categories">
+    {categories.map(([slug, item]) => (
+      <a class:list={{active: slug === category}} href={`/work/${slug}`}>
+        <span>{item.eyebrow}</span>
+        <small>{String(photos.filter((photo) => photo.category === slug).length).padStart(2, '0')}</small>
+      </a>
+    ))}
+  </nav>
+
+  <CategoryGallery photos={categoryPhotos} />
+
+  <section class="next-collection">
+    <p>Continue looking</p>
+    {(() => {
+      const keys = Object.keys(categoryInfo) as Category[];
+      const next = keys[(keys.indexOf(category) + 1) % keys.length];
+      return <a href={`/work/${next}`}>{categoryInfo[next].title} <span>→</span></a>;
+    })()}
+  </section>
+</BaseLayout>
